@@ -17,7 +17,6 @@ btnAgendar.addEventListener('click', () => {
         vCorreo: document.getElementById('correo').value,
         dDia: document.getElementById('dia').value,
         vLugar: document.getElementById('lugar').value,
-        dFechaReg:"2022-08-16",
         Key:"!SDFT$$$$&F(/GF7&F7f))?=0'===IY(&&%$%$!H(U/GFD%VBN(MI YT% %RCGRCVBBUJNU(NN"
     }
 
