@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <style rel="stylesheet" type="text/css" media="screen">
-      @import './style.css';
-    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="dialog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -129,12 +127,7 @@
 
         <div class="field-line">
           <div style="display: flex; width: 35%;">
-            <dt class="label">Día:</dt>
-            <select id="dia" name="dia">
-              <option value="value1">Value 1</option>
-              <option value="value2" selected>Value 2</option>
-              <option value="value3">Value 3</option>
-            </select>
+            <dt class="label">Día:</dt><input type="date" id="dia" name="dia">
           </div>
           <div style="display: flex; width: 35%;">
             <dt class="label">Lugar:</dt>
@@ -159,7 +152,7 @@
         by Humans ®
 
     </section>
-  </body>
-  <script src="citaservice.js"></script>
 
+    <script src="citaservice.js"></script>
+  </body>
 </html>

@@ -8,7 +8,6 @@ const btnAgendar = document.getElementById("btnAgendar");
 
 
 btnAgendar.addEventListener('click', () => {
-
     const objct ={
         vNombre: document.getElementById('nombres').value,
         vApellido: document.getElementById('apellidos').value,
@@ -31,9 +30,8 @@ btnAgendar.addEventListener('click', () => {
     })
     .then((res) => res.json())
     .then((response) => {
-        debugger;
-
         $("#mensaje").text(response.mensaje);
+
         if(response.swt == 1){           
             $('.alert').addClass("show");
             $('.alert').removeClass("hide");
@@ -54,3 +52,23 @@ btnAgendar.addEventListener('click', () => {
     })
     .catch((error) => console.log("Error: ", error));
 });
+
+
+ // $("#mensaje").text(response.mensaje);
+        // if(response.swt == 1){           
+        //     $('.alert').addClass("show");
+        //     $('.alert').removeClass("hide");
+        //     $('.alert').addClass("showAlert");
+        //     setTimeout(function(){
+        //       $('.alert').removeClass("show");
+        //       $('.alert').addClass("hide");
+        //     },5000);
+        // }else{
+        //     $('.alert').addClass("show");
+        //     $('.alert').removeClass("hide");
+        //     $('.alert').addClass("showAlert");
+        //     setTimeout(function(){
+        //       $('.alert').removeClass("show");
+        //       $('.alert').addClass("hide");
+        //     },5000);
+        // }
