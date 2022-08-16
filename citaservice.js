@@ -4,28 +4,12 @@ onload=function(){
     document.getElementById("logoCampana").src = ejemplo;
 }
 
-const button1 = document.getElementById("btnListar");
-const button2 = document.getElementById("btnAgendar");
+const btnAgendar = document.getElementById("btnAgendar");
 
-button1.addEventListener('click', () => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-    .then((res) => (res.ok? Promise.resolve(res): Promise.reject(res)))
-    .then((res) => res.json(res))
-    .then((res) => console.log(res));
 
-});
-
-button2.addEventListener('click', () => {
+btnAgendar.addEventListener('click', () => {
 
     const objct ={
-        /*vNombre:"FRANCISCO PEDRO",
-        vApellido:"CONDOR MARTINEZ",
-        vDocumento:"45036143",
-        dFechaNac:"1988-03-01",
-        vCelular:"965839805",
-        vCorreo:"fpedro.martinez.net@gmail.com",
-        dDia:"2022-08-16",
-        vLugar:"lima",*/
         vNombre: document.getElementById('nombres').value,
         vApellido: document.getElementById('apellidos').value,
         vDocumento: document.getElementById('dni').value,
@@ -46,6 +30,27 @@ button2.addEventListener('click', () => {
         }
     })
     .then((res) => res.json())
-    .then((response) => console.log("Exito: ", response))
+    .then((response) => {
+        debugger;
+
+        $("#mensaje").text(response.mensaje);
+        if(response.swt == 1){           
+            $('.alert').addClass("show");
+            $('.alert').removeClass("hide");
+            $('.alert').addClass("showAlert");
+            setTimeout(function(){
+              $('.alert').removeClass("show");
+              $('.alert').addClass("hide");
+            },5000);
+        }else{
+            $('.alert').addClass("show");
+            $('.alert').removeClass("hide");
+            $('.alert').addClass("showAlert");
+            setTimeout(function(){
+              $('.alert').removeClass("show");
+              $('.alert').addClass("hide");
+            },5000);
+        }
+    })
     .catch((error) => console.log("Error: ", error));
 });
