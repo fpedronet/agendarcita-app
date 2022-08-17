@@ -86,6 +86,16 @@ color: #E90000;
   animation-duration: 1s
 }
 
+.card-pink{
+    background-color: #FFBEB3;
+    border-radius: 40px;
+}
+
+.card-purple{
+    background-color: #9472BB;
+    border-radius: 40px;
+}
+
 @-webkit-keyframes animatebottom {
   from { bottom:-100px; opacity:0 } 
   to { bottom:0px; opacity:1 }
