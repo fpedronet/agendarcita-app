@@ -1,12 +1,10 @@
 @import '~ngx-toastr/toastr';
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif !important;}
+body { font-family: Roboto, "Helvetica Neue", sans-serif !important;}
 
 body {
     color: black;
     background-color: white;
-    font-family: sans-serif;
-    margin: 10px;
 }
 
 *{
@@ -74,6 +72,12 @@ p{
 .sponsors{
   width: 33%;
   margin: 5px;
+}
+
+.redes{
+  border-radius: 100%;
+  height: 40px;
+  padding: 5px;
 }
 
 /*Form*/
