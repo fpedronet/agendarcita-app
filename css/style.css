@@ -55,6 +55,12 @@ h1, h2, h3, h4, h5, h6{
 color: #E90000;
 }
 
+.titulo3{
+    color: #fff;
+    font-size: 10px;
+    padding-right: 98px;
+    }
+
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
@@ -97,7 +103,7 @@ HEADER
 } */
 .bg-color
 {
-    background-color: #ea0001c7;
+    background-color:  #EA3E3E;
     min-height: 500px;
 }
 #main-header
@@ -147,7 +153,7 @@ HEADER
     line-height: 54px;
     font-weight: 400;
     text-transform: uppercase;
-    background: red;
+    background: #E90000;
     color: #fff;
     -webkit-transition: color 0.2s ease-out;
     transition: color 0.2s ease-out;
@@ -562,7 +568,7 @@ contact
 ***********************************/
 #contact
 {
-    background-color: rgb(73, 84, 105);
+    background-color: #FFF6F4;
 }
 .btn-submit, .btn-submit:hover, .btn-submit:focus
 {
@@ -592,7 +598,7 @@ contact
 }
 
 .validation {
-    color: red;
+    color: #E90000;
     display:none;
     margin: 0 0 20px;
     font-weight:400;
@@ -610,9 +616,9 @@ contact
 }
 
 #errormessage {
-    color: red;
+    color: #E90000;
     display:none;
-    border:1px solid red;
+    border:1px solid #E90000;
     text-align:center;
     padding:15px;
     font-weight:600;
@@ -639,6 +645,8 @@ contact
 #footer
 {
     padding: 20px 0px;
+    background-color:#C62D2D;
+    height: 523px;
 }
 .scrollToTop {
     position: fixed;
