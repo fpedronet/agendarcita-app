@@ -4,7 +4,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif !important;}
 
 body {
     color: black;
-    background-color: lightgrey;
+    background-color: white;
     font-family: sans-serif;
     margin: 10px;
 }
@@ -19,7 +19,7 @@ body {
 }
 
 a{
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -38,13 +38,19 @@ p{
     text-align: -webkit-center;
 }
 
-.box {
+.card-agendar {
+    background-color: #FFECE8
+}
+
+.card-sponsors {
     text-align: center;
     padding-block: 10px;
     margin-block: 20px;
     border: solid;
     border-width: thin;
     text-align: -webkit-center;
+    background-color: #C72D2D;
+    color: white;
 }
 
 .label {
