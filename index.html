@@ -24,16 +24,16 @@
     <section id="header">
       <div style="display: flex">
         <div>
-          <img id="logoCampana" height="75px">
+          <img id="logoSA" height="75px">
         </div>        
         <div style="width: 100%;
         float: right;
         text-align: right;">
-          <button>
-            ¿Cómo<br>donar?
+          <button class="shortcut">
+            <a href="#como-donar">¿Cómo<br>donar?</a>
           </button>
-          <button>
-            Agendar<br>cita
+          <button class="shortcut">
+            <a href="#agendar-cita">Agendar<br>cita</a>
           </button>
         </div>
         
@@ -69,7 +69,7 @@
           #Todos con Andrea
       </h1>
     </section>
-    <section class="card">
+    <section id="como-donar" class="card">
       <div>
         <p>
           Para ser donantes de sangre debes cumplir con estos requisitos básicos:
@@ -93,7 +93,7 @@
       </div>        
     </section>
     <br>
-    <section class="card">
+    <section id="agendar-cita" class="card">
         <p style="margin-bottom: 10px">
             ¡Quiero agendar cita para donar sangre y salvar vidas!
             <br>
@@ -144,7 +144,8 @@
         </button>
       </section>
     <section class="box">
-      <div style="display: flex; max-width: 750px;">
+      <div style="max-width: 750px;">
+        <div style="display: flex;">
           <div style="width: 50%;">
             <img style="border-radius: 90px;" id="logoPTMS" height="150px" alt="LOGO PTMS">
             <br>
@@ -161,9 +162,19 @@
           </div>
       </div>      
       <div style="display: flex; width: 100%;">
-        Logo ATV |Logo SISA | Logo Havas
+        <div class="sponsors">
+          <img id="logoATV" height="150px" alt="LOGO ATV">
+        </div>
+        <div class="sponsors">
+          <img id="logoSISA" height="150px" alt="LOGO SISA">
+        </div>
+        <div class="sponsors">
+          <img id="logoHAVAS" height="150px" alt="LOGO HAVAS">
+        </div>
       </div>
       Diseño by Humans ®
+      </div>
+      
     </section>
 
     <script src="citaservice.js"></script>

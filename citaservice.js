@@ -1,9 +1,12 @@
 onload=function(){
     var ejemplo = 'https://t3.ftcdn.net/jpg/04/19/17/68/360_F_419176802_9s4AoYMfzxDt3kaSYV55whCkTB76NsHN.jpg'
     /*Imágenes*/
-    document.getElementById("logoCampana").src = ejemplo;
+    document.getElementById("logoSA").src = './logo-SA.jpg';
     document.getElementById("logoPTMS").src = './logo-PTMS.jpg';
     document.getElementById("logoDONAR").src = './logo-DONAR.jfif';
+    document.getElementById("logoATV").src = './logo-ATV.jpg';
+    document.getElementById("logoSISA").src = ejemplo;
+    document.getElementById("logoHAVAS").src = './logo-HAVAS.jpeg';
 }
 
 const btnAgendar = document.getElementById("btnAgendar");
