@@ -10,6 +10,7 @@ $(document).ready(function(){
     var itemDia = "";
     var itemMeses = "";
     var itemAnio = "";
+    var itemLugar = "";
     var fecha = new Date();
 	var anio = fecha.getFullYear();
 
@@ -22,8 +23,10 @@ $(document).ready(function(){
     $("#cbdia").html("");
     $("#cbmeses").html("");
     $("#cbanio").html("");
+    $("#cblugar").html("");
 
     const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio","Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",];
+    const lugar = ["San Miguel - Plaza San Miguel", "Miraflores - Calle Tarata", "Surco - Wong Gardenias"];
 
     for (let index = 1; index <= 31; index++) {
         itemDia += "<option value="+index+">"+index+"</option>";
@@ -40,6 +43,11 @@ $(document).ready(function(){
         itemAnio += "<option value="+index+">"+index+"</option>";
         $("#cbanio").html(itemAnio);
     }
+
+    lugar.forEach(lugares => {
+        itemLugar += "<option value='"+lugares+"'>"+lugares+"</option>";
+        $("#cblugar").html(itemLugar);
+    });
 
 });
 
@@ -97,10 +105,11 @@ $(document).on('click','#btnAlerta', function(){
         vCelular: $("#celular").val(),
         vCorreo: $("#correo").val(),
         dCita: $fechacita,   
-        vLugar: '',
+        vLugar: $("#cblugar").val(),
         Key:"!SDFT$$$$&F(/GF7&F7f))?=0'===IY(&&%$%$!H(U/GFD%VBN(MI YT% %RCGRCVBBUJNU(NN"
     }
     
+    console.log(objct);
     fetch("https://service.poclab.pe/agendarcita/api/cita/PostAgendarCita", {
         method: "POST",
         body: JSON.stringify(objct),
