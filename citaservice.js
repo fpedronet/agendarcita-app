@@ -15,7 +15,7 @@ onload=function(){
     var sliderImgs = [
         'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/car.jpg',
         'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/sunset.jpg',
-        ejemplo
+        // ejemplo
     ]
 
     //Completa slider
@@ -26,6 +26,7 @@ onload=function(){
 }
 
 const btnAgendar = document.getElementById("btnAgendar");
+const btnAlerta = document.getElementById("btnAlerta");
 
 
 btnAgendar.addEventListener('click', () => {
@@ -50,29 +51,12 @@ btnAgendar.addEventListener('click', () => {
     })
     .then((res) => res.json())
     .then((response) => {
-        $("#mensaje").text(response.mensaje);
-        alerta(response);
+        $('#exampleModal').modal(options);
     })
     .catch((error) => console.log("Error: ", error));
 });
 
-
-function alerta(response){
-    if(response.swt == 1){           
-        $('.alert').addClass("show");
-        $('.alert').removeClass("hide");
-        $('.alert').addClass("showAlert");
-        setTimeout(function(){
-          $('.alert').removeClass("show");
-          $('.alert').addClass("hide");
-        },5000);
-    }else{
-        $('.alert').addClass("show");
-        $('.alert').removeClass("hide");
-        $('.alert').addClass("showAlert");
-        setTimeout(function(){
-          $('.alert').removeClass("show");
-          $('.alert').addClass("hide");
-        },5000);
-    }
-}
+btnAlerta.addEventListener('click', () => {
+  debugger;
+    $('#exampleModal').modal(options);
+});
