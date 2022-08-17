@@ -123,6 +123,11 @@ HEADER
     min-height: 650px;
     position: relative;
 } */
+
+#tutorial,#agendar{
+    background-color: #FFEBE7;
+}
+
 .bg-color
 {
     min-height: 500px;
@@ -622,7 +627,7 @@ contact
 .validation {
     color: #E90000;
     display:none;
-    margin: 0 0 20px;
+    margin: 0 7px 6px;
     font-weight:400;
     font-size:13px;
 }
