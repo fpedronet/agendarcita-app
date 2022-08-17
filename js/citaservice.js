@@ -54,6 +54,8 @@ $(document).ready(function(){
 $(document).on('click','#btnAlerta', function(){
     /*Validar*/
     var $validate = true;
+    var $fechavalidar1 = $('div#datetimepicker12').datepicker('getDate');
+    var $fechavalidar2 = new Date();
 
     $('.nombrecompleto, .documento, .celular, .correo, .datetimepicker12').hide();
 
@@ -77,62 +79,76 @@ $(document).on('click','#btnAlerta', function(){
         $('div#datetimepicker12').datepicker('getDate')==null ||  
         $('div#datetimepicker12').datepicker('getDate')==undefined){
             $validate = false;
+            $('#idefechacita').text('la fecha cita es obligatorio');
             $('.datetimepicker12').show();
     }
+    // debugger;
+    // if( $('div#datetimepicker12').datepicker('getDate')!="" &&  
+    //     $('div#datetimepicker12').datepicker('getDate')!=null &&  
+    //     $('div#datetimepicker12').datepicker('getDate')!=undefined)
+    //     {
+    //         if ($fechavalidar1.getTime() < $fechavalidar2.getTime()){
+    //             $validate = false;
+    //             $('#idefechacita').text('la fecha cita no puede ser menor a la fecha actual');
+    //             $('.datetimepicker12').show();
+    //         }
+
+    //     }
 
 
-    if( $validate){
 
-        /*Fecha Nacimiento */
-    var $month = $("#cbmeses").val();
-    var $day = $("#cbdia").val();
+    // if($validate){
 
-    $month = ($month < 10)?  ('0' + $month) : $month;
-    $day = ($day < 10)?  ('0' + $day) : $day;
-    var fecha = $("#cbanio").val() +"-"+ $month +"-"+$day;
+    //     /*Fecha Nacimiento */
+    // var $month = $("#cbmeses").val();
+    // var $day = $("#cbdia").val();
 
-    /*Fecha de la cita*/
-    var $fechacita =  $('div#datetimepicker12').datepicker('getDate');
-    if($fechacita!=null && $fechacita!='' && $fechacita!=undefined){
+    // $month = ($month < 10)?  ('0' + $month) : $month;
+    // $day = ($day < 10)?  ('0' + $day) : $day;
+    // var fecha = $("#cbanio").val() +"-"+ $month +"-"+$day;
 
-        var $yearcita = $fechacita.getFullYear();
-        var $monthcita = $fechacita.getMonth() + 1;
-        var $daycita = $fechacita.getDate();
+    // /*Fecha de la cita*/
+    // var $fechacita =  $('div#datetimepicker12').datepicker('getDate');
+    // if($fechacita!=null && $fechacita!='' && $fechacita!=undefined){
 
-        $monthcita = ($monthcita < 10)?  ('0' + $monthcita) : $monthcita;
-        $daycita  = ($daycita < 10)?  ('0' + $daycita) : $daycita;
-        $fechacita = $yearcita +"-"+ $monthcita +"-"+$daycita;
-    }
+    //     var $yearcita = $fechacita.getFullYear();
+    //     var $monthcita = $fechacita.getMonth() + 1;
+    //     var $daycita = $fechacita.getDate();
 
-    const objct ={
-        vNombreCompleto: $("#nombrecompleto").val(),
-        vDocumento: $("#documento").val(),
-        dFechaNac: fecha,       
-        vCelular: $("#celular").val(),
-        vCorreo: $("#correo").val(),
-        dCita: $fechacita,   
-        vLugar: $("#cblugar").val(),
-        Key:"!SDFT$$$$&F(/GF7&F7f))?=0'===IY(&&%$%$!H(U/GFD%VBN(MI YT% %RCGRCVBBUJNU(NN"
-    }
+    //     $monthcita = ($monthcita < 10)?  ('0' + $monthcita) : $monthcita;
+    //     $daycita  = ($daycita < 10)?  ('0' + $daycita) : $daycita;
+    //     $fechacita = $yearcita +"-"+ $monthcita +"-"+$daycita;
+    // }
+
+    // const objct ={
+    //     vNombreCompleto: $("#nombrecompleto").val(),
+    //     vDocumento: $("#documento").val(),
+    //     dFechaNac: fecha,       
+    //     vCelular: $("#celular").val(),
+    //     vCorreo: $("#correo").val(),
+    //     dCita: $fechacita,   
+    //     vLugar: $("#cblugar").val(),
+    //     Key:"!SDFT$$$$&F(/GF7&F7f))?=0'===IY(&&%$%$!H(U/GFD%VBN(MI YT% %RCGRCVBBUJNU(NN"
+    // }
     
-    console.log(objct);
-    fetch("https://service.poclab.pe/agendarcita/api/cita/PostAgendarCita", {
-        method: "POST",
-        body: JSON.stringify(objct),
-        headers:{
-            'Content-Type': 'application/json'
-        }
-    })
-    .then((res) => res.json())
-    .then((response) => {
-        if(response.swt==1){
-            $('#exampleModal').modal('show');
-        }else{
-            $('#exampleModal2').modal('show');
-        }
-    })
-    .catch((error) => console.log("Error: ", error));
-    }
+    // console.log(objct);
+    // fetch("https://service.poclab.pe/agendarcita/api/cita/PostAgendarCita", {
+    //     method: "POST",
+    //     body: JSON.stringify(objct),
+    //     headers:{
+    //         'Content-Type': 'application/json'
+    //     }
+    // })
+    // .then((res) => res.json())
+    // .then((response) => {
+    //     if(response.swt==1){
+    //         $('#exampleModal').modal('show');
+    //     }else{
+    //         $('#exampleModal2').modal('show');
+    //     }
+    // })
+    // .catch((error) => console.log("Error: ", error));
+    //}
 });
 
 $(document).on('click','#btnCerrarModal', function(){
