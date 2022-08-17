@@ -61,6 +61,12 @@ color: #E90000;
     padding-right: 98px;
 }
 
+.titulo-slider{
+    margin: 0; padding-bottom: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 70px;
+}
+
 .redes{
     border-radius: 100%;
     height: 60px;
@@ -119,7 +125,6 @@ HEADER
 } */
 .bg-color
 {
-    background-color:  #EA3E3E;
     min-height: 500px;
 }
 #main-header
@@ -800,4 +805,24 @@ body{
     line-height: 22px;
     text-align: center;
 }
+}
+
+@media (min-width: 768px){
+    .carousel-indicators {
+        bottom: 0px;
+    }
+}
+
+
+.carousel-indicators .active {
+    background-color: #E90000;
+    width: 15px;
+    height: 15px;
+}
+
+.carousel-indicators li {
+    background-color: #FFE0E0;
+    width: 13px;
+    height: 13px;
+    /*border-width: 0px;*/
 }
