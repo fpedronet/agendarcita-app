@@ -821,13 +821,23 @@ body{
 
 .carousel-indicators .active {
     background-color: #E90000;
+    border-color: white;
     width: 15px;
     height: 15px;
 }
 
 .carousel-indicators li {
     background-color: #FFE0E0;
+    border-color: black;
     width: 13px;
     height: 13px;
     /*border-width: 0px;*/
+}
+
+.button-ref{
+    border-radius: 25px;
+    background: #E90000;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff !important;
 }
