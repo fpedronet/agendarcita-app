@@ -135,6 +135,14 @@ $(document).on('click','#btnCerrarModal', function(){
     $("#cbanio").val($aniodesde);
 });
 
+$(document).on('keyup', '#documento', function(){
+    this.value = this.value.replace(/[^0-9]/g,''); 
+});
+
+$(document).on('keyup', '#celular', function(){
+    this.value = this.value.replace(/[^0-9]/g,''); 
+});
+
 
 
 
