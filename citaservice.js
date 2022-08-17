@@ -7,6 +7,18 @@ onload=function(){
     document.getElementById("logoATV").src = './logo-ATV.jpg';
     document.getElementById("logoSISA").src = ejemplo;
     document.getElementById("logoHAVAS").src = './logo-HAVAS.jpeg';
+
+    var sliderImgs = [
+        'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/car.jpg',
+        'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/sunset.jpg',
+        ejemplo
+    ]
+
+    //Completa slider
+    for (let i = 1; i <= 3; i++) {
+        //El primer hijo es la imagen
+        document.getElementById("slide"+i).children[0].src = sliderImgs[i-1];
+    }
 }
 
 const btnAgendar = document.getElementById("btnAgendar");
@@ -35,28 +47,44 @@ btnAgendar.addEventListener('click', () => {
     .then((res) => res.json())
     .then((response) => {
         $("#mensaje").text(response.mensaje);
-        alerta();      
+
+        if(response.swt == 1){           
+            $('.alert').addClass("show");
+            $('.alert').removeClass("hide");
+            $('.alert').addClass("showAlert");
+            setTimeout(function(){
+              $('.alert').removeClass("show");
+              $('.alert').addClass("hide");
+            },5000);
+        }else{
+            $('.alert').addClass("show");
+            $('.alert').removeClass("hide");
+            $('.alert').addClass("showAlert");
+            setTimeout(function(){
+              $('.alert').removeClass("show");
+              $('.alert').addClass("hide");
+            },5000);
+        }
     })
     .catch((error) => console.log("Error: ", error));
 });
 
 
-function alerta(){
-    if(response.swt == 1){           
-        $('.alert').addClass("show");
-        $('.alert').removeClass("hide");
-        $('.alert').addClass("showAlert");
-        setTimeout(function(){
-          $('.alert').removeClass("show");
-          $('.alert').addClass("hide");
-        },5000);
-    }else{
-        $('.alert').addClass("show");
-        $('.alert').removeClass("hide");
-        $('.alert').addClass("showAlert");
-        setTimeout(function(){
-          $('.alert').removeClass("show");
-          $('.alert').addClass("hide");
-        },5000);
-    }
-}
+ // $("#mensaje").text(response.mensaje);
+        // if(response.swt == 1){           
+        //     $('.alert').addClass("show");
+        //     $('.alert').removeClass("hide");
+        //     $('.alert').addClass("showAlert");
+        //     setTimeout(function(){
+        //       $('.alert').removeClass("show");
+        //       $('.alert').addClass("hide");
+        //     },5000);
+        // }else{
+        //     $('.alert').addClass("show");
+        //     $('.alert').removeClass("hide");
+        //     $('.alert').addClass("showAlert");
+        //     setTimeout(function(){
+        //       $('.alert').removeClass("show");
+        //       $('.alert').addClass("hide");
+        //     },5000);
+        // }

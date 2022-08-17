@@ -1,3 +1,7 @@
+@import '~ngx-toastr/toastr';
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif !important;}
+
 body {
     color: black;
     background-color: lightgrey;
@@ -31,6 +35,7 @@ p{
     text-align: center;
     background-color: lightblue;
     padding-block: 10px;
+    text-align: -webkit-center;
 }
 
 .box {
@@ -44,11 +49,20 @@ p{
 
 .label {
     padding-left: 10px !important;
+    padding-right: 5px !important;
 }
 
 .shortcut{
   width: 120px;
   font-size: inherit;
+  margin: -3px;
+}
+
+.input-agendar{
+  width: 120px;
+  font-size: inherit;
+  background-color: royalblue;
+  cursor: pointer;
 }
 
 .sponsors{
@@ -93,8 +107,14 @@ input[type=number] {
   .container{
     margin: auto;
     background-color: white;
-    width: 800px;
+    width: 100%;
+    text-align: -webkit-center;
+  }
+
+  .sub-container{
     padding: 30px;
+    padding-bottom: 1px;
+    max-width: 800px;    
   }
   
   ul, li {
@@ -105,7 +125,7 @@ input[type=number] {
   
   ul.slider{
     position: relative;
-    width: 800px;
+    width: 100%;
     height: 300px;
   }
   

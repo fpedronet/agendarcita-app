@@ -29,43 +29,43 @@
         <div style="width: 100%;
         float: right;
         text-align: right;">
-          <button class="shortcut">
-            <a href="#como-donar">¿Cómo<br>donar?</a>
+          <button class="shortcut" onclick="location.href='#como-donar';">
+            ¿Cómo<br>donar?
           </button>
-          <button class="shortcut">
-            <a href="#agendar-cita">Agendar<br>cita</a>
+          <button class="shortcut" onclick="location.href='#agendar-cita';">
+            Agendar<br>cita
           </button>
         </div>
         
       </div>      
       <div class="container">
-  
-        <ul class="slider">
-          <li id="slide1">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/car.jpg"/>
-          </li>
-          <li id="slide2">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/sunset.jpg"/>
-          </li>
-          <li id="slide3">
-            <img>
-          </li>
-        </ul>
-        
-        <ul class="menu">
-          <li>
-            <a href="#slide1">1</a>
-          </li>
-          <li>
-            <a href="#slide2">2</a>
-          </li>
-           <li>
-            <a href="#slide3">3</a>
-          </li>
-        </ul>
-        
+        <div class="sub-container">
+          <ul class="slider">
+            <li id="slide1">
+              <img>
+            </li>
+            <li id="slide2">
+              <img>
+            </li>
+            <li id="slide3">
+              <img>
+            </li>
+          </ul>
+          
+          <ul class="menu">
+            <li>
+              <a href="#slide1">1</a>
+            </li>
+            <li>
+              <a href="#slide2">2</a>
+            </li>
+             <li>
+              <a href="#slide3">3</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <h1>
+      <h1 style="margin-block: 20px;">
           #Todos con Andrea
       </h1>
     </section>
@@ -94,69 +94,77 @@
     </section>
     <br>
     <section id="agendar-cita" class="card">
+      <div style="max-width: 750px;">
         <p style="margin-bottom: 10px">
-            ¡Quiero agendar cita para donar sangre y salvar vidas!
-            <br>
-            Tú puedes elegir el día y lugar. Nosotros recorreremos todo
-            Lima con el Hemobus
-        </p>
+          ¡Quiero agendar cita para donar sangre y salvar vidas!
+          <br>
+          Tú puedes elegir el día y lugar. Nosotros recorreremos todo
+          Lima con el Hemobus
+      </p>
 
-        <div class="field-line">
-          <div style="display: flex; width: 35%;">
-            <dt class="label">Nombre:</dt> <input type="text" id="nombres" name="nombres" maxlength="50">
-          </div>
-          <div style="display: flex; width: 40%;">
-            <dt class="label">Apellidos:</dt> <input type="text" id="apellidos" name="apellidos" maxlength="50">
-          </div>
-          <div style="display: flex; width: 25%;">
-            <dt class="label">DNI:</dt> <input type="number" id="dni" name="dni" maxlength="8" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-          </div>          
+      <div class="field-line">
+        <div style="display: flex; width: 35%;">
+          <dt class="label">Nombre:</dt> <input type="text" id="nombres" name="nombres" maxlength="50">
         </div>
-
-        <div class="field-line">
-          <div style="display: flex; width: 25%;">
-            <dt class="label">F.nac:</dt> <input type="date" id="fecnacimiento" name="fecnacimiento">
-          </div>
-          <div style="display: flex; width: 35%;">
-            <dt class="label">Celular:</dt> <input type="text" id="celular" name="celular" maxlength="25">
-          </div>
-          <div style="display: flex; width: 40%;">
-            <dt class="label">Correo:</dt> <input type="text" id="correo" name="correo" maxlength="50">
-          </div>          
+        <div style="display: flex; width: 40%;">
+          <dt class="label">Apellidos:</dt> <input type="text" id="apellidos" name="apellidos" maxlength="50">
         </div>
+        <div style="display: flex; width: 25%;">
+          <dt class="label">DNI:</dt> <input type="number" id="dni" name="dni" maxlength="8" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+        </div>          
+      </div>
 
-        <div class="field-line">
-          <div style="display: flex; width: 35%;">
-            <dt class="label">Día:</dt><input type="date" id="dia" name="dia">
-          </div>
-          <div style="display: flex; width: 35%;">
-            <dt class="label">Lugar:</dt>
-            <select id="lugar" name="lugar">
-              <option value="value1">Value 1</option>
-              <option value="value2" selected>Value 2</option>
-              <option value="value3">Value 3</option>
-            </select>
-          </div>
+      <div class="field-line">
+        <div style="display: flex; width: 25%;">
+          <dt class="label">F.nac:</dt> <input type="date" id="fecnacimiento" name="fecnacimiento">
         </div>
+        <div style="display: flex; width: 35%;">
+          <dt class="label">Celular:</dt> <input type="text" id="celular" name="celular" maxlength="25">
+        </div>
+        <div style="display: flex; width: 40%;">
+          <dt class="label">Correo:</dt> <input type="text" id="correo" name="correo" maxlength="50">
+        </div>          
+      </div>
 
-        <button type="button" id="btnAgendar" name="btnAgendar">
+      <div class="field-line">
+        <div style="display: flex; width: 35%;">
+          <dt class="label">Día:</dt><input type="date" id="dia" name="dia">
+        </div>
+        <div style="display: flex; width: 35%;">
+          <dt class="label">Lugar:</dt>
+          <select id="lugar" name="lugar">
+            <option value="value1">Value 1</option>
+            <option value="value2" selected>Value 2</option>
+            <option value="value3">Value 3</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="text-align: right; padding-right: 10px;">
+        <button class="input-agendar" type="button" id="btnAgendar" name="btnAgendar">
+          <p style="color: white">
             Agendar
+          </p>
         </button>
-      </section>
+      </div>
+      
+      </div>
+    </section>
+
     <section class="box">
       <div style="max-width: 750px;">
         <div style="display: flex;">
           <div style="width: 50%;">
             <img style="border-radius: 90px;" id="logoPTMS" height="150px" alt="LOGO PTMS">
             <br>
-            <a href="https://www.instagram.com/portimisangre.pe/">ig: @portimisangre.pe</a>
+            <a href="https://www.instagram.com/portimisangre.pe/" target="_blank">ig: @portimisangre.pe</a>
             <br>
-            <a href="https://www.facebook.com/Portimisangre.pe">fb: Por Ti Mi Sangre</a>
+            <a href="https://www.facebook.com/Portimisangre.pe" target="_blank">fb: Por Ti Mi Sangre</a>
           </div>
           <div style="width: 50%;">
             <img style="border-radius: 90px;" id="logoDONAR" height="150px" alt="LOGO donar">
             <br>
-            <a href="https://www.instagram.com/donar_es_salvar/">ig: @donaressalvar</a>
+            <a href="https://www.instagram.com/donar_es_salvar/" target="_blank">ig: @donaressalvar</a>
             <br>
             <h5>fb: Donar es Salvar</h5>
           </div>
