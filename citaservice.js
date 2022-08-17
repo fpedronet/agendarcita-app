@@ -1,34 +1,42 @@
-onload=function(){
-    /*var ejemplo = 'https://t3.ftcdn.net/jpg/04/19/17/68/360_F_419176802_9s4AoYMfzxDt3kaSYV55whCkTB76NsHN.jpg'
-    //Logos
-    document.getElementById("logoCAMP").src = './assets/logos/logo-CAMP.jpg';
-    document.getElementById("logoPTMS").src = './assets/logos/logo-PTMS-w.png';
-    document.getElementById("logoDONAR").src = './assets/logos/logo-DONAR.jpg';
-    document.getElementById("logoATV").src = './assets/logos/logo-ATV.png';
-    document.getElementById("logoSISA").src = './assets/logos/logo-SA-w.png';
-    document.getElementById("logoHAVAS").src = './assets/logos/logo-HAVAS.png';
-    //Redes
-    document.getElementById("logoFB").src = './assets/redes/facebook.png';
-    document.getElementById("logoIG").src = './assets/redes/instagram.png';
-    document.getElementById("logoIN").src = './assets/redes/linkedin.png';*/
+$(document).ready(function(){
 
-    var sliderImgs = [
-        'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/car.jpg',
-        'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/sunset.jpg',
-        ejemplo
-    ]
+    
 
-    //Completa slider
-    for (let i = 1; i <= 3; i++) {
-        //El primer hijo es la imagen
-        document.getElementById("slide"+i).children[0].src = sliderImgs[i-1];
+    var itemDia = "";
+    var itemMeses = "";
+    var itemAnio = "";
+    var fecha = new Date();
+	var anio = fecha.getFullYear();
+
+    var aniohasta = anio - 18
+    var aniodesde = anio - 65
+
+    $("#cbdia").html("");
+    $("#cbmeses").html("");
+    $("#cbanio").html("");
+
+    const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio","Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",];
+
+    for (let index = 1; index <= 31; index++) {
+        itemDia += "<option value="+index+">"+index+"</option>";
+        $("#cbdia").html(itemDia);
     }
-}
 
-const btnAgendar = document.getElementById("btnAgendar");
+    meses.forEach(mes => {
+        itemMeses += "<option value="+mes+">"+mes+"</option>";
+        $("#cbmeses").html(itemMeses);
+    });
+
+    for (let index = aniodesde; index <= aniohasta; index++) {
+        itemAnio += "<option value="+index+">"+index+"</option>";
+        $("#cbanio").html(itemAnio);
+    }
 
 
-btnAgendar.addEventListener('click', () => {
+});
+
+$(document).on('click','#btnAlerta', function(){
+
     const objct ={
         vNombre: document.getElementById('nombres').value,
         vApellido: document.getElementById('apellidos').value,
@@ -50,29 +58,9 @@ btnAgendar.addEventListener('click', () => {
     })
     .then((res) => res.json())
     .then((response) => {
-        $("#mensaje").text(response.mensaje);
-        alerta(response);
+        $('#exampleModal').modal('show');
     })
     .catch((error) => console.log("Error: ", error));
 });
 
 
-function alerta(response){
-    if(response.swt == 1){           
-        $('.alert').addClass("show");
-        $('.alert').removeClass("hide");
-        $('.alert').addClass("showAlert");
-        setTimeout(function(){
-          $('.alert').removeClass("show");
-          $('.alert').addClass("hide");
-        },5000);
-    }else{
-        $('.alert').addClass("show");
-        $('.alert').removeClass("hide");
-        $('.alert').addClass("showAlert");
-        setTimeout(function(){
-          $('.alert').removeClass("show");
-          $('.alert').addClass("hide");
-        },5000);
-    }
-}

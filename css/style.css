@@ -598,13 +598,14 @@ contact
 }
 .form-control
 {
-    background-color: transparent;
+    background-color: #fff;
     border-radius: 0px;
-    color: #be9e21 !important;
-    border-color: #be9e21;
+    color: #050971 !important;
+    border-radius:13px;
+    height: 40px;
 }
 .form-control:focus {
-    border-color: #be9e21;
+    border-color: #050971;
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);

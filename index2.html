@@ -28,32 +28,33 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
  
 </head>
 
 <body>
+
   <div id="myDiv">
+    <!---->
+    <!---->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <div class="modal-header" style="border-bottom:0px;">            
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="opacity: 1.5;">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            ...
+          <div class="modal-body" style="text-align: center;">
+            <img src="assets/varias/reservada.png" style="width: 100%;"/>
+            <h2 class="service-title titulo2" style="text-transform:inherit">¡Agenda reservada!</h2>
+            <p class="sub-title pad-bt15 titulo1">Muchas gracias por recervar una cita<br>con PTMS, se ha realizado con éxito.</p>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+          <div class="modal-footer" style="text-align:center;border-top:0px;">
+            <button type="button" class="btn btn-danger" style="background-color:#E90000;width: 140px;font-size: 17px;font-weight: 900;" data-dismiss="modal">Volver al home</button>
           </div>
         </div>
       </div>
     </div>
-
     <!---->
     <!---->
     <div class="header">
@@ -206,39 +207,66 @@
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="contact-form">
-              <form action="" method="post" role="form" class="contactForm">
-                <div class="col-md-6 padding-right-zero">
+              <!-- <form action="" method="post" role="form" class="contactForm"> -->
+                <div class="col-md-12">
                   <div class="form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validation"></div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                    <input type="text" class="form-control form-control-lg" id="nombres" name="nombres" placeholder="Nombre y apellidos*" />
                     <div class="validation"></div>
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    <input type="text" class="form-control" id="documento" name="documento" placeholder="Documento de identidad*" />
                     <div class="validation"></div>
                   </div>
                 </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                    <div class="validation"></div>
-                  </div>
-                  <button type="submit" class="btn btn-primary btn-submit">SEND NOW</button>
 
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    Launch demo modal
-                  </button>
-    
-                  
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <select class="form-control" id="cbdia" name="cbdia" placeholder="Dia*">
+                    </select>
+                  </div>
                 </div>
-              </form>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <select class="form-control" id="cbmeses" name="cbmeses" placeholder="Mes*">
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <select class="form-control" id="cbanio" name="cbanio" placeholder="Año*">
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="celular" name="celular" placeholder="Celular*" />
+                    <div class="validation"></div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="correo" name="correo" placeholder="Email*" />
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <div class='input-group date' id='datetimepicker1'>
+                      <input type='text' class="form-control" />
+                      <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                  </div>
+                  </div>
+                </div>
+               
+                <div class="col-md-12">
+                  <button type="button" class="btn btn-primary btn-submit" data-toggle="modal" data-target="#exampleModal">AGENDAR</button>    
+                  <button type="button" class="btn btn-primary btn-submit" id="btnAlerta" name="btnAlerta">MODAL PRUEBA</button>   
+                </div>
+              <!-- </form> -->
 
             </div>
           </div>
@@ -308,6 +336,7 @@
   <script src="js/wow.js"></script>
   <script src="js/jquery.bxslider.min.js"></script>
   <script src="js/custom.js"></script>
+  <script src="citaservice.js"></script>
   <script src="contactform/contactform.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
