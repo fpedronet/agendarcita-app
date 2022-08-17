@@ -138,7 +138,7 @@ HEADER
 .navbar-default {
     background-color: white;
     border:0px;
-    padding: 20px 0; 
+    padding: 10px 0; 
     transition: all 0.3s;
 }
 
@@ -174,7 +174,7 @@ HEADER
 }
 .navbar-default .navbar-nav > li > a
 {
-    padding: 5px 10px;
+    padding: 0px 10px;
     font-size: 14px;
     line-height: 54px;
     font-weight: 400;
@@ -239,6 +239,7 @@ h2.bnr-sub-title
 .btn-menu{
     background-color:#E90000;
     border-radius:25px;
+    margin: 0 0 0 8px;
 }
 
 .btn-download
@@ -602,11 +603,11 @@ contact
 }
 .btn-submit, .btn-submit:hover, .btn-submit:focus
 {
-    background-color: transparent;
+    background-color: #E90000;
     border-radius: 60px;
-    color: #be9e21;
+    color: #fff;
     font-weight: 400;
-    border: 1px solid #be9e21;
+    border: 1px solid #E90000;
     font-size: 14px;
     padding: 6px 20px;
 }
@@ -616,7 +617,7 @@ contact
     border-radius: 0px;
     color: #2E2E2E !important;
     border-radius:13px;
-    height: 40px;
+    height: 46px;
 }
 .form-control:focus {
     border-color: #050971;
