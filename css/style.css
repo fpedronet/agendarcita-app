@@ -59,7 +59,13 @@ color: #E90000;
     color: #fff;
     font-size: 10px;
     padding-right: 98px;
-    }
+}
+
+.redes{
+    border-radius: 100%;
+    height: 60px;
+    padding: 5px;
+}
 
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }

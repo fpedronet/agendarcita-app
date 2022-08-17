@@ -1,16 +1,16 @@
 onload=function(){
-    var ejemplo = 'https://t3.ftcdn.net/jpg/04/19/17/68/360_F_419176802_9s4AoYMfzxDt3kaSYV55whCkTB76NsHN.jpg'
-    /*Logos*/
+    /*var ejemplo = 'https://t3.ftcdn.net/jpg/04/19/17/68/360_F_419176802_9s4AoYMfzxDt3kaSYV55whCkTB76NsHN.jpg'
+    //Logos
     document.getElementById("logoCAMP").src = './assets/logos/logo-CAMP.jpg';
     document.getElementById("logoPTMS").src = './assets/logos/logo-PTMS-w.png';
     document.getElementById("logoDONAR").src = './assets/logos/logo-DONAR.jpg';
     document.getElementById("logoATV").src = './assets/logos/logo-ATV.png';
     document.getElementById("logoSISA").src = './assets/logos/logo-SA-w.png';
     document.getElementById("logoHAVAS").src = './assets/logos/logo-HAVAS.png';
-    /*Redes*/
+    //Redes
     document.getElementById("logoFB").src = './assets/redes/facebook.png';
     document.getElementById("logoIG").src = './assets/redes/instagram.png';
-    document.getElementById("logoIN").src = './assets/redes/linkedin.png';
+    document.getElementById("logoIN").src = './assets/redes/linkedin.png';*/
 
     var sliderImgs = [
         'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/car.jpg',
