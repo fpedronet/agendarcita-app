@@ -61,6 +61,11 @@ color: #E90000;
     padding-right: 98px;
 }
 
+.titulo4{
+    padding-left:57px;
+    font-weight:800;
+}
+
 .titulo-slider{
     margin: 0; padding-bottom: 0;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
