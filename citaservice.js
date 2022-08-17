@@ -47,44 +47,28 @@ btnAgendar.addEventListener('click', () => {
     .then((res) => res.json())
     .then((response) => {
         $("#mensaje").text(response.mensaje);
-
-        if(response.swt == 1){           
-            $('.alert').addClass("show");
-            $('.alert').removeClass("hide");
-            $('.alert').addClass("showAlert");
-            setTimeout(function(){
-              $('.alert').removeClass("show");
-              $('.alert').addClass("hide");
-            },5000);
-        }else{
-            $('.alert').addClass("show");
-            $('.alert').removeClass("hide");
-            $('.alert').addClass("showAlert");
-            setTimeout(function(){
-              $('.alert').removeClass("show");
-              $('.alert').addClass("hide");
-            },5000);
-        }
+        alerta();
     })
     .catch((error) => console.log("Error: ", error));
 });
 
 
- // $("#mensaje").text(response.mensaje);
-        // if(response.swt == 1){           
-        //     $('.alert').addClass("show");
-        //     $('.alert').removeClass("hide");
-        //     $('.alert').addClass("showAlert");
-        //     setTimeout(function(){
-        //       $('.alert').removeClass("show");
-        //       $('.alert').addClass("hide");
-        //     },5000);
-        // }else{
-        //     $('.alert').addClass("show");
-        //     $('.alert').removeClass("hide");
-        //     $('.alert').addClass("showAlert");
-        //     setTimeout(function(){
-        //       $('.alert').removeClass("show");
-        //       $('.alert').addClass("hide");
-        //     },5000);
-        // }
+function alerta(){
+    if(response.swt == 1){           
+        $('.alert').addClass("show");
+        $('.alert').removeClass("hide");
+        $('.alert').addClass("showAlert");
+        setTimeout(function(){
+          $('.alert').removeClass("show");
+          $('.alert').addClass("hide");
+        },5000);
+    }else{
+        $('.alert').addClass("show");
+        $('.alert').removeClass("hide");
+        $('.alert').addClass("showAlert");
+        setTimeout(function(){
+          $('.alert').removeClass("show");
+          $('.alert').addClass("hide");
+        },5000);
+    }
+}
