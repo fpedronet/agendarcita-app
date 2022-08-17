@@ -243,8 +243,32 @@ h2.bnr-sub-title
 
 .btn-menu{
     background-color:#E90000;
+    color: white;
+    border-color: white !important;
+    border-style: solid;
     border-radius:25px;
     margin: 0 0 0 18px;
+    font-weight: bolder;
+}
+
+.btn-menu-2{
+    background-color:transparent;
+    color: white;
+    border-color: white;
+    border-style: solid;
+    border-radius:25px;
+    margin: 0 0 0 18px;
+    font-weight: bolder;
+}
+
+.btn-menu{
+    background-color:white;
+    color: #E90000;
+    border-color: #E90000;
+    border-style: solid;
+    border-radius:25px;
+    margin: 0 0 0 18px;
+    font-weight: bolder;
 }
 
 .btn-download
@@ -851,4 +875,5 @@ body{
     line-height: 20px !important;
     font-weight: bold;
     color: #fff !important;
+    margin: 0 0 0 18px;
 }
