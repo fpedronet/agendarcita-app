@@ -125,7 +125,11 @@ $(document).on('click','#btnAlerta', function(){
     })
     .then((res) => res.json())
     .then((response) => {
-        $('#exampleModal').modal('show');
+        if(response.swt==1){
+            $('#exampleModal').modal('show');
+        }else{
+            $('#exampleModal2').modal('show');
+        }
     })
     .catch((error) => console.log("Error: ", error));
     }
