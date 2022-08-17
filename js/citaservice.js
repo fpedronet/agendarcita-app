@@ -11,6 +11,7 @@ $(document).ready(function(){
     var fecha = new Date();
 	var anio = fecha.getFullYear();
 
+    var count = 1;
     var aniohasta = anio - 18
     var aniodesde = anio - 65
 
@@ -26,8 +27,9 @@ $(document).ready(function(){
     }
 
     meses.forEach(mes => {
-        itemMeses += "<option value="+mes+">"+mes+"</option>";
+        itemMeses += "<option value="+count+">"+mes+"</option>";
         $("#cbmeses").html(itemMeses);
+        count++;
     });
 
     for (let index = aniodesde; index <= aniohasta; index++) {
@@ -40,30 +42,38 @@ $(document).ready(function(){
 
 $(document).on('click','#btnAlerta', function(){
 
+    var $month = $("#cbmeses").val();
+    month = ($month < 10)?  ('0' + $month) : $month;
+
+    var fecha = $("#cbanio").val() +"-"+ month +"-"+$("#cbdia").val();
+
     const objct ={
-        vNombre: document.getElementById('nombres').value,
-        vApellido: document.getElementById('apellidos').value,
-        vDocumento: document.getElementById('dni').value,
-        dFechaNac: document.getElementById('fecnacimiento').value,
-        vCelular: document.getElementById('celular').value,
-        vCorreo: document.getElementById('correo').value,
-        dDia: document.getElementById('dia').value,
-        vLugar: document.getElementById('lugar').value,
+        vNombreCompleto: $("#nombrecompleto").val(),
+        vDocumento: $("#documento").val(),
+        dFechaNac: fecha,       
+        vCelular: $("#celular").val(),
+        vCorreo: $("#correo").val(),
+        dCita: $("#datetimepicker12").val(),       
+
+        // vLugar: document.getElementById('lugar').value,
         Key:"!SDFT$$$$&F(/GF7&F7f))?=0'===IY(&&%$%$!H(U/GFD%VBN(MI YT% %RCGRCVBBUJNU(NN"
     }
 
-    fetch("https://service.poclab.pe/agendarcita/api/cita/PostAgendarCita", {
-        method: "POST",
-        body: JSON.stringify(objct),
-        headers:{
-            'Content-Type': 'application/json'
-        }
-    })
-    .then((res) => res.json())
-    .then((response) => {
-        $('#exampleModal').modal('show');
-    })
-    .catch((error) => console.log("Error: ", error));
+
+    console.log(objct);
+    
+    // fetch("https://service.poclab.pe/agendarcita/api/cita/PostAgendarCita", {
+    //     method: "POST",
+    //     body: JSON.stringify(objct),
+    //     headers:{
+    //         'Content-Type': 'application/json'
+    //     }
+    // })
+    // .then((res) => res.json())
+    // .then((response) => {
+    //     $('#exampleModal').modal('show');
+    // })
+    // .catch((error) => console.log("Error: ", error));
 });
 
 
