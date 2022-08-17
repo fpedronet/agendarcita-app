@@ -47,13 +47,13 @@ btnAgendar.addEventListener('click', () => {
     .then((res) => res.json())
     .then((response) => {
         $("#mensaje").text(response.mensaje);
-        alerta();
+        alerta(response);
     })
     .catch((error) => console.log("Error: ", error));
 });
 
 
-function alerta(){
+function alerta(response){
     if(response.swt == 1){           
         $('.alert').addClass("show");
         $('.alert').removeClass("hide");
