@@ -123,6 +123,11 @@ HEADER
     min-height: 650px;
     position: relative;
 } */
+
+#tutorial,#agendar{
+    background-color: #FFEBE7;
+}
+
 .bg-color
 {
     min-height: 500px;
