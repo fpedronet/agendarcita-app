@@ -1,3 +1,40 @@
+$(document).ready(function(){
+
+    
+
+    var itemDia = "";
+    var itemMeses = "";
+    var itemAnio = "";
+    var fecha = new Date();
+	var anio = fecha.getFullYear();
+
+    var aniohasta = anio - 18
+    var aniodesde = anio - 65
+
+    $("#cbdia").html("");
+    $("#cbmeses").html("");
+    $("#cbanio").html("");
+
+    const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio","Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",];
+
+    for (let index = 1; index <= 31; index++) {
+        itemDia += "<option value="+index+">"+index+"</option>";
+        $("#cbdia").html(itemDia);
+    }
+
+    meses.forEach(mes => {
+        itemMeses += "<option value="+mes+">"+mes+"</option>";
+        $("#cbmeses").html(itemMeses);
+    });
+
+    for (let index = aniodesde; index <= aniohasta; index++) {
+        itemAnio += "<option value="+index+">"+index+"</option>";
+        $("#cbanio").html(itemAnio);
+    }
+
+
+});
+
 $(document).on('click','#btnAlerta', function(){
 
     const objct ={
@@ -25,3 +62,5 @@ $(document).on('click','#btnAlerta', function(){
     })
     .catch((error) => console.log("Error: ", error));
 });
+
+
