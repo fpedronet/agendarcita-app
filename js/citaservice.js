@@ -1,6 +1,9 @@
 $(document).ready(function(){
 
-    
+    $('#datetimepicker12').datepicker({
+        inline: true,
+        sideBySide: true
+    });
 
     var itemDia = "";
     var itemMeses = "";
