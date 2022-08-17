@@ -55,7 +55,7 @@ $(document).on('click','#btnAlerta', function(){
     /*Validar*/
     var $validate = true;
 
-    $('.nombrecompleto, documento, celular, correo').hide();
+    $('.nombrecompleto, .documento, .celular, .correo, .datetimepicker12').hide();
 
     if($("#nombrecompleto").val()=="" || $("#nombrecompleto").val()==null){
         $validate = false;
@@ -72,6 +72,12 @@ $(document).on('click','#btnAlerta', function(){
     if($("#correo").val()=="" || $("#correo").val()==null){
         $validate = false;
         $('.correo').show();
+    }
+    if( $('div#datetimepicker12').datepicker('getDate')=="" ||  
+        $('div#datetimepicker12').datepicker('getDate')==null ||  
+        $('div#datetimepicker12').datepicker('getDate')==undefined){
+            $validate = false;
+            $('.datetimepicker12').show();
     }
 
 
