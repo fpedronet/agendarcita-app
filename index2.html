@@ -50,7 +50,7 @@
             <p class="sub-title pad-bt15 titulo1">Muchas gracias por recervar una cita<br>con PTMS, se ha realizado con éxito.</p>
           </div>
           <div class="modal-footer" style="text-align:center;border-top:0px;">
-            <button type="button" class="btn btn-danger" style="background-color:#E90000;width: 140px;font-size: 17px;font-weight: 900;" data-dismiss="modal">Volver al home</button>
+            <button type="button" class="btn btn-danger" style="background-color:#E90000;width: 140px;font-size: 17px;font-weight: 900;" id="btnCerrarModal" data-dismiss="modal">Volver al home</button>
           </div>
         </div>
       </div>
@@ -211,13 +211,13 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <input type="text" class="form-control" style="text-transform: uppercase;" id="nombrecompleto" name="nombrecompleto" placeholder="Nombre y apellidos*" maxlength="100" />
-                    <div class="validation"></div>
+                    <div class="validation nombrecompleto">campo requerido</div>
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
                     <input type="number" class="form-control" style="text-transform: uppercase;" id="documento" name="documento" placeholder="Documento de identidad*" maxlength="8"/>
-                    <div class="validation"></div>
+                    <div class="validation documento">campo requerido</div>
                   </div>
                 </div>
 
@@ -243,22 +243,26 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <input type="email" class="form-control" id="celular" name="celular" placeholder="Celular*" />
-                    <div class="validation"></div>
+                    <div class="validation celular">campo requerido</div>
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
                     <input type="email" class="form-control" id="correo" name="correo" placeholder="Email*" />
+                    <div class="validation correo">campo requerido</div>
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <div id="datetimepicker12"></div>
+                    <div id="datetimepicker12" n></div>
                   </div>
                 </div>
                
                 <div class="col-md-12">
-                  <button type="button" class="btn btn-primary btn-submit" data-toggle="modal" data-target="#exampleModal">AGENDAR</button>    
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Launch demo modal
+                  </button>
+
                   <button type="button" class="btn btn-primary btn-submit" id="btnAlerta" name="btnAlerta">MODAL PRUEBA</button>   
                 </div>
               <!-- </form> -->
