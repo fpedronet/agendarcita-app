@@ -26,7 +26,7 @@ $(document).ready(function(){
     $("#cblugar").html("");
 
     const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio","Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",];
-    const lugar = ["San Miguel - Plaza San Miguel", "Miraflores - Calle Tarata", "Surco - Wong Gardenias"];
+    const lugar = ["Independencia", "San Miguel", "Lince", "Miraflores","San Borja", "La Molina","Surco","Villa El Salvador"];
 
     for (let index = 1; index <= 31; index++) {
         itemDia += "<option value="+index+">"+index+"</option>";
