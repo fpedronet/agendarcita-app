@@ -236,6 +236,10 @@ h2.bnr-sub-title
     transition: all 0.3s;
 }
 
+.btn-menu{
+    background-color:#E90000;
+    border-radius:25px;
+}
 
 .btn-download
 {
