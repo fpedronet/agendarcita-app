@@ -249,6 +249,7 @@ h2.bnr-sub-title
     border-radius:25px;
     margin: 0 0 0 18px;
     font-weight: bolder;
+    padding: 5px;
 }
 
 .btn-menu-2{
@@ -259,9 +260,10 @@ h2.bnr-sub-title
     border-radius:25px;
     margin: 0 0 0 18px;
     font-weight: bolder;
+    padding: 5px;
 }
 
-.btn-menu{
+.btn-menu-3{
     background-color:white;
     color: #E90000;
     border-color: #E90000;
@@ -269,6 +271,7 @@ h2.bnr-sub-title
     border-radius:25px;
     margin: 0 0 0 18px;
     font-weight: bolder;
+    padding: 5px;
 }
 
 .btn-download
