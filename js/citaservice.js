@@ -53,9 +53,11 @@ $(document).ready(function(){
 
 $(document).on('click','#btnAlerta', function(){
     /*Validar*/
+    debugger;
     var $validate = true;
     var $fechavalidar1 = $('div#datetimepicker12').datepicker('getDate');
-    var $fechavalidar2 = new Date();
+    var $fechavalidaractual = new Date();
+    // var $fechavalidar2 = new Date($fechavalidaractual.getFullYear()+"-"+$fechavalidaractual.getMonth+"-"+ $fechavalidaractual.getDay);
 
     $('.nombrecompleto, .documento, .celular, .correo, .datetimepicker12').hide();
 
@@ -97,58 +99,58 @@ $(document).on('click','#btnAlerta', function(){
 
 
 
-    // if($validate){
+    if($validate){
 
-    //     /*Fecha Nacimiento */
-    // var $month = $("#cbmeses").val();
-    // var $day = $("#cbdia").val();
+        /*Fecha Nacimiento */
+    var $month = $("#cbmeses").val();
+    var $day = $("#cbdia").val();
 
-    // $month = ($month < 10)?  ('0' + $month) : $month;
-    // $day = ($day < 10)?  ('0' + $day) : $day;
-    // var fecha = $("#cbanio").val() +"-"+ $month +"-"+$day;
+    $month = ($month < 10)?  ('0' + $month) : $month;
+    $day = ($day < 10)?  ('0' + $day) : $day;
+    var fecha = $("#cbanio").val() +"-"+ $month +"-"+$day;
 
-    // /*Fecha de la cita*/
-    // var $fechacita =  $('div#datetimepicker12').datepicker('getDate');
-    // if($fechacita!=null && $fechacita!='' && $fechacita!=undefined){
+    /*Fecha de la cita*/
+    var $fechacita =  $('div#datetimepicker12').datepicker('getDate');
+    if($fechacita!=null && $fechacita!='' && $fechacita!=undefined){
 
-    //     var $yearcita = $fechacita.getFullYear();
-    //     var $monthcita = $fechacita.getMonth() + 1;
-    //     var $daycita = $fechacita.getDate();
+        var $yearcita = $fechacita.getFullYear();
+        var $monthcita = $fechacita.getMonth() + 1;
+        var $daycita = $fechacita.getDate();
 
-    //     $monthcita = ($monthcita < 10)?  ('0' + $monthcita) : $monthcita;
-    //     $daycita  = ($daycita < 10)?  ('0' + $daycita) : $daycita;
-    //     $fechacita = $yearcita +"-"+ $monthcita +"-"+$daycita;
-    // }
+        $monthcita = ($monthcita < 10)?  ('0' + $monthcita) : $monthcita;
+        $daycita  = ($daycita < 10)?  ('0' + $daycita) : $daycita;
+        $fechacita = $yearcita +"-"+ $monthcita +"-"+$daycita;
+    }
 
-    // const objct ={
-    //     vNombreCompleto: $("#nombrecompleto").val(),
-    //     vDocumento: $("#documento").val(),
-    //     dFechaNac: fecha,       
-    //     vCelular: $("#celular").val(),
-    //     vCorreo: $("#correo").val(),
-    //     dCita: $fechacita,   
-    //     vLugar: $("#cblugar").val(),
-    //     Key:"!SDFT$$$$&F(/GF7&F7f))?=0'===IY(&&%$%$!H(U/GFD%VBN(MI YT% %RCGRCVBBUJNU(NN"
-    // }
+    const objct ={
+        vNombreCompleto: $("#nombrecompleto").val(),
+        vDocumento: $("#documento").val(),
+        dFechaNac: fecha,       
+        vCelular: $("#celular").val(),
+        vCorreo: $("#correo").val(),
+        dCita: $fechacita,   
+        vLugar: $("#cblugar").val(),
+        Key:"!SDFT$$$$&F(/GF7&F7f))?=0'===IY(&&%$%$!H(U/GFD%VBN(MI YT% %RCGRCVBBUJNU(NN"
+    }
     
-    // console.log(objct);
-    // fetch("https://service.poclab.pe/agendarcita/api/cita/PostAgendarCita", {
-    //     method: "POST",
-    //     body: JSON.stringify(objct),
-    //     headers:{
-    //         'Content-Type': 'application/json'
-    //     }
-    // })
-    // .then((res) => res.json())
-    // .then((response) => {
-    //     if(response.swt==1){
-    //         $('#exampleModal').modal('show');
-    //     }else{
-    //         $('#exampleModal2').modal('show');
-    //     }
-    // })
-    // .catch((error) => console.log("Error: ", error));
-    //}
+    console.log(objct);
+    fetch("https://service.poclab.pe/agendarcita/api/cita/PostAgendarCita", {
+        method: "POST",
+        body: JSON.stringify(objct),
+        headers:{
+            'Content-Type': 'application/json'
+        }
+    })
+    .then((res) => res.json())
+    .then((response) => {
+        if(response.swt==1){
+            $('#exampleModal').modal('show');
+        }else{
+            $('#exampleModal2').modal('show');
+        }
+    })
+    .catch((error) => console.log("Error: ", error));
+    }
 });
 
 $(document).on('click','#btnCerrarModal', function(){
