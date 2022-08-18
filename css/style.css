@@ -923,6 +923,16 @@ body{
     }
 }
 
+@media (max-width:768px){
+    .manocorazon{
+        display: block;
+    }
+    .imgmanocorazon{
+        height: 15em;
+        position: fixed;
+        top: -160px;
+    }
+}
 
 
 
