@@ -893,6 +893,39 @@ body{
     }
 }
 
+.manocorazon{
+    display: block;
+}
+
+.imgmanocorazon{
+    height: 34em;
+    position: absolute;
+    right: 0;
+    top: -40px;
+}
+
+
+@media (max-width:1250px){
+    .manocorazon{
+        display: block;
+    }
+    .imgmanocorazon{
+        height: 24em;
+        position: absolute;
+        right: 0;
+        top: -40px;
+    }
+}
+
+@media (max-width:1200px){
+    .manocorazon{
+        display: none;
+    }
+}
+
+
+
+
 
 .carousel-indicators .active {
     background-color: #E90000;
