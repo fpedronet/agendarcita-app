@@ -904,6 +904,9 @@ body{
     top: -40px;
 }
 
+.sliderimage1{
+    width: 100%;
+}
 
 @media (max-width:1250px){
     .manocorazon{
@@ -920,6 +923,12 @@ body{
 @media (max-width:1200px){
     .manocorazon{
         display: none;
+    }
+    .titulo-slider{
+        font-size:30px;
+    }
+    .sliderimage1{
+        width:90%;
     }
 }
 
