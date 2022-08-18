@@ -1,47 +1,12 @@
 var $aniodesde = 0;
 
-$(document).ready(function() {
-    $(function() {
-      $('#datetimepicker12').datepicker({
-        dateFormat: 'dd/mm/yy',
-        showButtonPanel: false,
-        changeMonth: false,
-        changeYear: false,
-        showOn: "button",
-        buttonImage: "images/calendar.gif",
-        buttonImageOnly: true,
-        minDate: '+1D',
-        maxDate: '+3M',
-        inline: true
-      });
-    });
-    $.datepicker.regional['es'] = {
-      closeText: 'Cerrar',
-      prevText: '<Ant',
-      nextText: 'Sig>',
-      currentText: 'Hoy',
-      monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-      monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
-      dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-      dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
-      dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
-      weekHeader: 'Sm',
-      dateFormat: 'dd/mm/yy',
-      firstDay: 1,
-      isRTL: false,
-      showMonthAfterYear: false,
-      yearSuffix: ''
-    };
-    $.datepicker.setDefaults($.datepicker.regional['es']);
-  });
-
 $(document).ready(function(){
-      
-    // $('#datetimepicker12').datepicker({
-    //     inline: true,
-    //     sideBySide: true,
-    //     startDate: '+0d'
-    // });
+
+    $('#datetimepicker12').datepicker({
+        inline: true,
+        sideBySide: true,
+        startDate: '+0d'
+    });
 
     var itemDia = "";
     var itemMeses = "";
@@ -88,10 +53,14 @@ $(document).ready(function(){
 });
 
 $(document).on('click','#btnAlerta', function(){
-
     var $validate = true;
     var $step1= true;
     var $step2= true;
+
+
+    var $fechavalidar1 = $('div#datetimepicker12').datepicker('getDate');
+    var $fechavalidaractual = new Date();
+    // var $fechavalidar2 = new Date($fechavalidaractual.getFullYear()+"-"+$fechavalidaractual.getMonth+"-"+ $fechavalidaractual.getDay);
 
     $('.nombrecompleto, .documento, .celular, .correo, .datetimepicker12').hide();
 
@@ -123,7 +92,18 @@ $(document).on('click','#btnAlerta', function(){
             $('#idefechacita').text('la fecha cita es obligatorio');
             $('.datetimepicker12').show();
     }
+    // debugger;
+    // if( $('div#datetimepicker12').datepicker('getDate')!="" &&  
+    //     $('div#datetimepicker12').datepicker('getDate')!=null &&  
+    //     $('div#datetimepicker12').datepicker('getDate')!=undefined)
+    //     {
+    //         if ($fechavalidar1.getTime() < $fechavalidar2.getTime()){
+    //             $validate = false;
+    //             $('#idefechacita').text('la fecha cita no puede ser menor a la fecha actual');
+    //             $('.datetimepicker12').show();
+    //         }
 
+    //     }
     if(!$step1){
         $('a[href="#step1"]').click();
     }else if(!$step2){

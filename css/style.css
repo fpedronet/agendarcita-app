@@ -893,6 +893,10 @@ body{
     }
 }
 
+.carousel-control {
+    width: 8.5%;
+}
+
 .manocorazon{
     display: block;
 }
