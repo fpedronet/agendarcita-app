@@ -948,14 +948,14 @@ body{
 
 .carousel-indicators .active {
     background-color: #E90000;
-    border-color: white;
+    border-color: #FFE0E0;
     width: 15px;
     height: 15px;
 }
 
 .carousel-indicators li {
     background-color: #FFE0E0;
-    border-color: black;
+    border-color: #E90000;
     width: 13px;
     height: 13px;
     /*border-width: 0px;*/

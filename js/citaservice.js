@@ -4,7 +4,8 @@ $(document).ready(function(){
 
     $('#datetimepicker12').datepicker({
         inline: true,
-        sideBySide: true
+        sideBySide: true,
+        startDate: '+0d'
     });
 
     var itemDia = "";
