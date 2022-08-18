@@ -5,7 +5,8 @@ $(document).ready(function(){
     $('#datetimepicker12').datepicker({
         inline: true,
         sideBySide: true,
-        startDate: '+0d'
+        startDate: '+0d',
+        language: 'es'
     });
 
     var itemDia = "";
