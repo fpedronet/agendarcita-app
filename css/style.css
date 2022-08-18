@@ -321,7 +321,7 @@ features
 .title, .service-title
 {
     font-family: 'Fira Sans', sans-serif;
-    font-size: 35px;
+    font-size: 50px;
     text-transform: uppercase;
 }
 .item-img
@@ -951,7 +951,7 @@ button:focus,
 
 /*---------signup-step-------------*/
 .bg-color{
-	background-color: #333;
+	/* background-color: #333; */
 }
 .signup-step-container{
 	padding: 150px 0px;
