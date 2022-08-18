@@ -172,7 +172,7 @@
       <div class="container" style="margin: 0; width: 100%">
         <div class="row">
 
-          <div class="col-md-12 text-center">
+          <div class="col-md-12 text-center margentitulo">
             <h2 class="service-title pad-bt15 titulo1" style="text-transform: none;">#TodosConAndrea</h2>
           </div>
 
@@ -214,12 +214,12 @@
             <h2 class="service-title pad-bt15 titulo2">¿Como donar?</h2>
             <p class="sub-title pad-bt15">Para ser donantes de sangre debes cumplir con estos requisitos básicos:</p>
           </div>
-          <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="col-md-8 col-sm-8 col-xs-12">
             <div class="service-item">
-              <img src="assets/varias/2-personas.png" style="width: 500px;" alt="CÓMO DONAR">
+              <img src="assets/varias/2-personas.png" style="width: 710px;" alt="CÓMO DONAR">
             </div>
           </div>
-          <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="service-item" style="font-weight: normal;">
               <p style="margin: auto;"><img src="assets/iconos/p1.png" height="40px">  Tener entre 18 y 65 años</p>
               <p style="margin: auto;"><img src="assets/iconos/p2.png" height="40px">  Peso superior a 50 kg</p>
@@ -282,127 +282,125 @@
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">
             
-        <div class="row d-flex justify-content-center">
-          <div class="col-md-8">
-              <div class="wizard">
-                  <div class="wizard-inner">
-                      <div class="connecting-line"></div>
-                      <ul class="nav nav-tabs" role="tablist">
-                          <li role="presentation" class="active">
-                              <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"><span class="round-tab">1 </span></a>
-                          </li>
-                          <li role="presentation" class="disabled">
-                              <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false"><span class="round-tab">2</span></a>
-                          </li>
-                          <li role="presentation" class="disabled">
-                              <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"><span class="round-tab">3</span></a>
-                          </li>
-                      </ul>
-                  </div>
-  
-                  <form role="form" action="index.html" class="login-box">
-                      <div class="tab-content" id="main_form">
-                          <div class="tab-pane active" role="tabpanel" id="step1">
-                            <label class="titulo4">Datos personales</label>
-                            <div class="contact-form">
-                              <!-- <form action="" method="post" role="form" class="contactForm"> -->
-                                <div class="col-md-12">
-                                  <div class="form-group">
-                                    <input type="text" class="form-control" style="text-transform: uppercase;" id="nombrecompleto" name="nombrecompleto" placeholder="Nombre y apellidos*" maxlength="100" />
-                                    <div class="validation nombrecompleto">campo requerido</div>
-                                  </div>
-                                </div>
-                                <div class="col-md-12">
-                                  <div class="form-group">
-                                    <input type="text" class="form-control" id="documento" name="documento" placeholder="Documento de identidad*" maxlength="8"/>
-                                    <div class="validation documento">campo requerido</div>
-                                  </div>
-                                </div>
-                
-                                <label class="titulo4">Fecha nacimiento</label>
-                                <br>
-                                <div class="col-md-4">
-                                  <div class="form-group">
-                                    <select class="form-control" id="cbdia" name="cbdia" placeholder="Dia*">
-                                    </select>
-                                  </div>
-                                </div>
-                                <div class="col-md-4">
-                                  <div class="form-group">
-                                    <select class="form-control" id="cbmeses" name="cbmeses" placeholder="Mes*">
-                                    </select>
-                                  </div>
-                                </div>
-                                <div class="col-md-4">
-                                  <div class="form-group">
-                                    <select class="form-control" id="cbanio" name="cbmeses" placeholder="Año*">
-                                    </select>
-                                  </div>
-                                </div>
-                
-                                <div class="col-md-12">
-                                  <div class="form-group">
-                                    <input type="text" class="form-control" id="celular" name="celular" placeholder="Celular*" maxlength="9" />
-                                    <div class="validation celular">campo requerido</div>
-                                  </div>
-                                </div>
-                                <div class="col-md-12">
-                                  <div class="form-group">
-                                    <input type="email" class="form-control" id="correo" name="correo" placeholder="Email*" />
-                                    <div class="validation correo">campo requerido</div>
-                                  </div>
-                                </div>
-                
-                                <label class="titulo4">Lugar</label>
-                                <br>
-                                <div class="col-md-12">
-                                  <div class="form-group">
-                                    <select class="form-control" id="cblugar" name="cblugar" placeholder="Lugar*">
-                                    </select>
-                                  </div>
-                                </div>
-                
-                                <label class="titulo4">Cita</label>
-                                <br>
-                                <div class="col-md-12">
-                                  <div class="form-group">                    
-                                    <div id="datetimepicker12" n></div>
-                                    <div class="validation datetimepicker12" id="idefechacita"></div>
-                                  </div>
-                                </div>
-                               
-                                  <button type="button" class="btn btn-danger btn-submit" id="btnAlerta" name="btnAlerta">Agendar</button>   
-                                </div>
-                              <ul class="list-inline pull-right">
-                                  <li><button type="button" class="default-btn next-step">Continue to next step</button></li>
-                              </ul>
-                          </div>
-                          <div class="tab-pane" role="tabpanel" id="step2">
-                              
-                              <ul class="list-inline pull-right">
-                                  <li><button type="button" class="default-btn prev-step">Back</button></li>
-                                  <li><button type="button" class="default-btn next-step skip-btn">Skip</button></li>
-                                  <li><button type="button" class="default-btn next-step">Continue</button></li>
-                              </ul>
-                          </div>
-                          <div class="tab-pane" role="tabpanel" id="step3">                              
-                              
-                              <ul class="list-inline pull-right">
-                                  <li><button type="button" class="default-btn prev-step">Back</button></li>
-                                  <li><button type="button" class="default-btn next-step skip-btn">Skip</button></li>
-                                  <li><button type="button" class="default-btn next-step">Continue</button></li>
-                              </ul>
-                          </div>
-                          <div class="clearfix"></div>
-                      </div>
-                      
-                  </form>
-              </div>
-          </div>
-      </div>
-            
-              <!-- </form> -->
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12">
+                    <div class="wizard">
+                        <div class="wizard-inner">
+                            <div class="connecting-line"></div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"><span class="round-tab">1 </span></a>
+                                </li>
+                                <li role="presentation" class="disabled">
+                                    <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false"><span class="round-tab">2</span></a>
+                                </li>
+                                <li role="presentation" class="disabled">
+                                    <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"><span class="round-tab">3</span></a>
+                                </li>
+                            </ul>
+                        </div>
+        
+                        <form role="form" action="index.html" class="login-box">
+                            <div class="tab-content" id="main_form">
 
+                                <div class="tab-pane active" role="tabpanel" id="step1">
+                                  <label class="titulo4">Datos personales</label>
+                                  <div class="contact-form">
+                                    <!-- <form action="" method="post" role="form" class="contactForm"> -->
+                                      <div class="col-md-12">
+                                        <div class="form-group">
+                                          <input type="text" class="form-control" style="text-transform: uppercase;" id="nombrecompleto" name="nombrecompleto" placeholder="Nombre y apellidos*" maxlength="100" />
+                                          <div class="validation nombrecompleto">campo requerido</div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-12">
+                                        <div class="form-group">
+                                          <input type="text" class="form-control" id="documento" name="documento" placeholder="Documento de identidad*" maxlength="8"/>
+                                          <div class="validation documento">campo requerido</div>
+                                        </div>
+                                      </div>
+                      
+                                      <label class="titulo4">Fecha nacimiento</label>
+                                      <br>
+                                      <div class="col-md-4">
+                                        <div class="form-group">
+                                          <select class="form-control" id="cbdia" name="cbdia" placeholder="Dia*">
+                                          </select>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                        <div class="form-group">
+                                          <select class="form-control" id="cbmeses" name="cbmeses" placeholder="Mes*">
+                                          </select>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                        <div class="form-group">
+                                          <select class="form-control" id="cbanio" name="cbmeses" placeholder="Año*">
+                                          </select>
+                                        </div>
+                                      </div>
+                      
+                                      <div class="col-md-12">
+                                        <div class="form-group">
+                                          <input type="text" class="form-control" id="celular" name="celular" placeholder="Celular*" maxlength="9" />
+                                          <div class="validation celular">campo requerido</div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-12">
+                                        <div class="form-group">
+                                          <input type="email" class="form-control" id="correo" name="correo" placeholder="Email*" />
+                                          <div class="validation correo">campo requerido</div>
+                                        </div>
+                                      </div>
+
+                                      </div>
+                                    <ul class="list-inline pull-right">
+                                        <li>
+                                          <button type="button" class="btn btn-light btn-submit next-step">Siguiente</button>
+                                          </li>
+                                    </ul>
+                                </div>
+
+                                <div class="tab-pane" role="tabpanel" id="step2" style="text-align: center;">
+                                     <label class="titulo4">Cita</label>
+                                      <br>
+                                      <div class="col-md-12" style="margin-left:170px;">
+                                        <div class="form-group">                    
+                                          <div id="datetimepicker12"></div>
+                                        </div>
+                                      </div>
+                                      <div class="validation datetimepicker12" id="idefechacita"></div>
+
+                                    <ul class="list-inline pull-right">
+                                      <li><button type="button" class="btn btn-light btn-submit next-step">Siguiente</button></li>
+                                      <li><button type="button" class="btn btn-light btn-submit1 prev-step">Volver</button></li>
+                                    </ul>
+                                </div>
+
+                                <div class="tab-pane" role="tabpanel" id="step3">                              
+                                  <label class="titulo4">Lugar</label>
+                                      <br>
+                                      <div class="col-md-12">
+                                        <div class="form-group">
+                                          <select class="form-control" id="cblugar" name="cblugar" placeholder="Lugar*">
+                                          </select>
+                                        </div>
+                                      </div>
+                                    <ul class="list-inline pull-right">
+                                      <li> <button type="button" class="btn btn-danger btn-submit1" id="btnAlerta" name="btnAlerta">Agendar</button></li>
+                                      <li><button type="button" class="btn btn-light btn-submit prev-step" style="background-color: #fff;color: #E90000;">Volver</button></li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12" style="text-align: -webkit-right;">
             <img src="assets/varias/mano-corazon.png" style="height: 400px;">

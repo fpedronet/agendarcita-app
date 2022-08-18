@@ -131,6 +131,7 @@ HEADER
 
 #tutorial,#agendar{
     background-color: #FFEBE7;
+    margin-top:60px;
 }
 
 .bg-color
@@ -331,7 +332,7 @@ features
     line-height: 25px;
 }
 .pad-bt15 {
-    padding-bottom: 15px;
+    /* padding-bottom: 15px; */
 }
 .sec-sub-title
 {
@@ -635,12 +636,24 @@ contact
 }
 .btn-submit, .btn-submit:hover, .btn-submit:focus
 {
+    background-color: #e900005e;
+    border-radius: 60px;
+    color: #fff;
+    border: 1px solid #E90000;
+    font-size: 17px;
+    font-weight: 700;
+    width: 135px;
+    padding: 6px 20px;
+}
+.btn-submit1, .btn-submit1:hover, .btn-submit1:focus
+{
     background-color: #E90000;
     border-radius: 60px;
     color: #fff;
-    font-weight: 400;
     border: 1px solid #E90000;
-    font-size: 14px;
+    font-size: 17px;
+    font-weight: 700;
+    width: 135px;
     padding: 6px 20px;
 }
 .form-control
@@ -773,6 +786,11 @@ cta
 Responsive media queries
 ************************************
 ***********************************/
+
+.margentitulo{
+margin: 45px 0 45px 0;
+}
+
 @media (min-width: 768px) and (max-width: 980px) {
     .service-item, .blog-sec, .wrap-item, .loction-info{
     margin-bottom: 15px;
@@ -906,9 +924,9 @@ button:focus,
 	background-color: #fff;
 }
 /*----------step-wizard------------*/
-.d-flex{
+/* .d-flex{
 	display: flex;
-}
+} */
 .justify-content-center{
 	justify-content: center;
 }
@@ -940,14 +958,18 @@ button:focus,
 
 .connecting-line {
     height: 2px;
-    background: #e0e0e0;
+    background: #E90000;
     position: absolute;
-    width: 75%;
+    width: 60%;
     margin: 0 auto;
     left: 0;
     right: 0;
     top: 50%;
-    z-index: 1;
+    z-index: 0;
+}
+
+.datepicker-days{
+    background-color: #fff;
 }
 
 .wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
@@ -963,7 +985,6 @@ span.round-tab {
     line-height: 30px;
     display: inline-block;
     border-radius: 50%;
-    background: #fff;
     z-index: 2;
     position: absolute;
     left: 0;
@@ -971,25 +992,26 @@ span.round-tab {
     font-size: 16px;
     color: #0e214b;
     font-weight: 500;
-    border: 1px solid #ddd;
+    border: 1px solid #E90000;
+    background-color: #FFEBE7;
 }
 span.round-tab i{
     color:#555555;
 }
 .wizard li.active span.round-tab {
-        background: #0db02b;
+    background: #E90000;
     color: #fff;
-    border-color: #0db02b;
+    border-color: #E90000;
 }
 .wizard li.active span.round-tab i{
     color: #5bc0de;
 }
 .wizard .nav-tabs > li.active > a i{
-	color: #0db02b;
+	color: #FFEBE7;
 }
 
 .wizard .nav-tabs > li {
-    width: 25%;
+    width: 32%;
 }
 
 .wizard li:after {
@@ -1044,14 +1066,20 @@ span.round-tab i{
 }
 .prev-step,
 .next-step{
-    font-size: 13px;
-    padding: 8px 24px;
-    border: none;
-    border-radius: 4px;
-    margin-top: 30px;
+    background-color: #E90000;
+    color: #fff;
+    border-radius: 60px;
+    font-weight: 700;
+    font-size: 17px;
+    width: 135px;
 }
 .next-step{
-	background-color: #0db02b;
+    background-color: #fff;
+    color: #E90000;
+    border-radius: 60px;
+    font-weight: 700;
+    font-size: 17px;
+    width: 135px;
 }
 .skip-btn{
 	background-color: #cec12d;
