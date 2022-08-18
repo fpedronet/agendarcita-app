@@ -159,9 +159,9 @@ $(document).on('click','#btnAlerta', function(){
                 $('#btnAlerta').prop('disabled', false);
                 if(response.swt==1){
                     $('a[href="#step1"]').click();
-                    $('#exampleModal').modal('show');
+                    $('#exampleModal').modal({backdrop: 'static', keyboard: false});
                 }else{
-                    $('#exampleModal2').modal('show');
+                    $('#exampleModal2').modal({backdrop: 'static', keyboard: false});
                 }
             })
             .catch((error) =>  $('#btnAlerta').prop('disabled', false));
@@ -185,6 +185,7 @@ $(document).on('keyup', '#documento', function(){
 $(document).on('keyup', '#celular', function(){
     this.value = this.value.replace(/[^0-9]/g,''); 
 });
+
 
 // ------------step-wizard-------------
 $(document).ready(function () {
