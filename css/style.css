@@ -129,6 +129,19 @@ HEADER
     position: relative;
 } */
 
+#contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -6px 0 8px;
+  }
+  
+  #contenedor > div {
+    width: 30%;
+    margin: 3px;
+    margin-bottom: 14px;
+  }
+
 #tutorial,#agendar{
     background-color: #FFEBE7;
     margin-top:60px;
@@ -250,7 +263,8 @@ h2.bnr-sub-title
     border-radius:25px;
     margin: 0 0 0 18px;
     font-weight: bolder;
-    padding: 5px;
+    padding: 9px;
+    width: 220px;
 }
 
 .btn-menu-2{
@@ -261,7 +275,8 @@ h2.bnr-sub-title
     border-radius:25px;
     margin: 0 0 0 18px;
     font-weight: bolder;
-    padding: 5px;
+    padding: 9px;
+    width: 220px;
 }
 
 .btn-menu-3{

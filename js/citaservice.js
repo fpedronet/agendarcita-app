@@ -111,6 +111,7 @@ $(document).on('click','#btnAlerta', function(){
 
 
     if($validate && $step1 && $step2){
+        $('#btnAlerta').prop('disabled', true);
 
         /*Fecha Nacimiento */
             var $month = $("#cbmeses").val();
@@ -144,7 +145,8 @@ $(document).on('click','#btnAlerta', function(){
                 Key:"!SDFT$$$$&F(/GF7&F7f))?=0'===IY(&&%$%$!H(U/GFD%VBN(MI YT% %RCGRCVBBUJNU(NN"
             }
             
-            console.log(objct);
+            $('#btnAlerta').prop('disabled', true);
+
             fetch("https://service.poclab.pe/agendarcita/api/cita/PostAgendarCita", {
                 method: "POST",
                 body: JSON.stringify(objct),
@@ -154,6 +156,7 @@ $(document).on('click','#btnAlerta', function(){
             })
             .then((res) => res.json())
             .then((response) => {
+                $('#btnAlerta').prop('disabled', false);
                 if(response.swt==1){
                     $('a[href="#step1"]').click();
                     $('#exampleModal').modal('show');
@@ -161,7 +164,7 @@ $(document).on('click','#btnAlerta', function(){
                     $('#exampleModal2').modal('show');
                 }
             })
-            .catch((error) => console.log("Error: ", error));
+            .catch((error) =>  $('#btnAlerta').prop('disabled', false));
     }
 });
 
