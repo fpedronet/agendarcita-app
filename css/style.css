@@ -75,7 +75,7 @@ color: #E90000;
 
 .titulo-slider{
     margin: 0; padding-bottom: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Gilroy','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 60px;
 }
 
@@ -184,7 +184,7 @@ HEADER
 }
 .navbar-default .navbar-brand {
     color: #fff;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Gilroy','Raleway', sans-serif;
     font-weight: 700;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus
@@ -225,7 +225,7 @@ HEADER
 }
 .bnr-title, .bnr-sub-title
 {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Gilroy','Fira Sans', sans-serif;
 }
 h1.bnr-title
 {
@@ -325,7 +325,7 @@ features
 ***********************************/
 .title, .service-title
 {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Gilroy','Fira Sans', sans-serif;
     font-size: 50px;
     text-transform: uppercase;
 }
@@ -476,7 +476,7 @@ ul.service-list li i
     box-sizing:border-box
 }
 .portfolio-item figure h2 {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Gilroy','Fira Sans', sans-serif;
     color:#fff;
     font-size:20px;
     text-align:left;
@@ -578,7 +578,7 @@ TESTIMONIAL
     position: absolute;
     font-weight: 300;
     font-size: 3em;
-    font-family: Georgia, serif;
+    font-family: 'Gilroy',Georgia, serif;
     color: #ccc;
     top: 62%;
 }
@@ -975,7 +975,7 @@ body{
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Gilroy','Roboto', sans-serif;
 }
 * {
 	margin: 0;
