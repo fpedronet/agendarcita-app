@@ -2,6 +2,8 @@ var $aniodesde = 0;
 
 $(document).ready(function(){
 
+    $('#take-over').modal({backdrop: 'static', keyboard: false});
+
     $('#datetimepicker12').datepicker({
         inline: true,
         sideBySide: true,
