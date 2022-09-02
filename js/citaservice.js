@@ -53,17 +53,13 @@ $(document).ready(function(){
         $("#cblugar").html(itemLugar);
     });
 
+    GetFirstHashtag();
 });
 
 $(document).on('click','#btnAlerta', function(){
     var $validate = true;
     var $step1= true;
     var $step2= true;
-
-
-    var $fechavalidar1 = $('div#datetimepicker12').datepicker('getDate');
-    var $fechavalidaractual = new Date();
-    // var $fechavalidar2 = new Date($fechavalidaractual.getFullYear()+"-"+$fechavalidaractual.getMonth+"-"+ $fechavalidaractual.getDay);
 
     $('.nombrecompleto, .documento, .celular, .correo, .datetimepicker12').hide();
 
@@ -95,18 +91,7 @@ $(document).on('click','#btnAlerta', function(){
             $('#idefechacita').text('la fecha cita es obligatorio');
             $('.datetimepicker12').show();
     }
-    // debugger;
-    // if( $('div#datetimepicker12').datepicker('getDate')!="" &&  
-    //     $('div#datetimepicker12').datepicker('getDate')!=null &&  
-    //     $('div#datetimepicker12').datepicker('getDate')!=undefined)
-    //     {
-    //         if ($fechavalidar1.getTime() < $fechavalidar2.getTime()){
-    //             $validate = false;
-    //             $('#idefechacita').text('la fecha cita no puede ser menor a la fecha actual');
-    //             $('.datetimepicker12').show();
-    //         }
 
-    //     }
     if(!$step1){
         $('a[href="#step1"]').click();
     }else if(!$step2){
@@ -146,9 +131,10 @@ $(document).on('click','#btnAlerta', function(){
                 vCorreo: $("#correo").val(),
                 dCita: $fechacita,   
                 vLugar: $("#cblugar").val(),
+                hashtag: $('#hashtag').text(),   
                 Key:"!SDFT$$$$&F(/GF7&F7f))?=0'===IY(&&%$%$!H(U/GFD%VBN(MI YT% %RCGRCVBBUJNU(NN"
             }
-            
+
             $('#btnAlerta').prop('disabled', true);
 
             fetch("https://service.poclab.pe/agendarcita/api/cita/PostAgendarCita", {
@@ -225,6 +211,15 @@ function nextTab(elem) {
 }
 function prevTab(elem) {
     $(elem).prev().find('a[data-toggle="tab"]').click();
+}
+
+function GetFirstHashtag(){
+    fetch("https://service.poclab.pe/agendarcita/api/cita/GetFirstHashtag")
+        .then((res) => res.json())
+        .then((response) => {
+            $('#hashtag').text(response.hashtag);
+        })
+        .catch((error) => $('#hashtag').text("No hay hashtag..!"));
 }
 
 
