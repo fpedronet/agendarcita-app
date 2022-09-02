@@ -217,7 +217,12 @@ function GetFirstHashtag(){
     fetch("https://service.poclab.pe/agendarcita/api/cita/GetFirstHashtag")
         .then((res) => res.json())
         .then((response) => {
-            $('#hashtag').text(response.hashtag);
+            if(response.hashtag!=null && response.hashtag!=""){
+                $('#hashtag').text(response.hashtag);
+            }else{
+                $('#hashtag').text("");
+            }
+           
         })
         .catch((error) => $('#hashtag').text("No hay hashtag..!"));
 }
