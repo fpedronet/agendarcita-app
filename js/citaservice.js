@@ -1,5 +1,4 @@
 var $aniodesde = 0;
-var detector = new MobileDetect(window.navigator.userAgent);
 
 $(document).ready(function(){
 
@@ -56,7 +55,7 @@ $(document).ready(function(){
 
     GetFirstHashtag();
 
-    SaveInformationSession();
+    PostGuardarVisita();
 });
 
 $(document).on('click','#btnAlerta', function(){
@@ -230,27 +229,35 @@ function GetFirstHashtag(){
         .catch((error) => $('#hashtag').text("No hay hashtag..!"));
 }
 
-function SaveInformationSession(){
+function PostGuardarVisita(){
+
     var ip = "";
     var url = window.location.toString();
+    var detector = new MobileDetect(window.navigator.userAgent)
+
+    console.log( "Mobile: " + detector.mobile());
+    console.log( "Phone: " + detector.phone());
+    console.log( "Tablet: " + detector.tablet());
+    console.log( "OS: " + detector.os());
+    console.log( "userAgent: " + detector.userAgent());
 
     //Origen
-    var tipoDispositivo = "Escritorio";
-
     var marca = "";
-    var celular = detector.phone();
-    var tablet = detecter.tablet();
+    var dipositivo = "Escritorio";
+    var sisOperativo = "";
+    var navegador = "";
 
-    if(celular !== null || tablet !== null){
+    if(detector.mobile()!=null){
         marca = detector.mobile();
-        if(celular !== null)
-            tipoDispositivo = "Celular";
-        if(tablet !== null)
-            tipoDispositivo = "Tableta";
+    }else if(detector.phone()!=null){
+        dipositivo = detector.phone();
+    }else if(detector.tablet()!=null){
+        dipositivo = detector.tablet();
+    }else if(detector.os()!=null){
+        sisOperativo = detector.os();
+    }else if(detector.userAgent()!=null){
+        navegador = detector.userAgent();
     }
-
-    var sisOperativo = detector.os();
-    var navegador = detector.userAgent();
 
     $.getJSON("https://api.ipify.org?format=json",
     function(data) {
