@@ -54,6 +54,8 @@ $(document).ready(function(){
     });
 
     GetFirstHashtag();
+
+    SaveInformationSession();
 });
 
 $(document).on('click','#btnAlerta', function(){
@@ -227,6 +229,31 @@ function GetFirstHashtag(){
         .catch((error) => $('#hashtag').text("No hay hashtag..!"));
 }
 
+function SaveInformationSession(){
+    var fecha = new Date();
+    var ip = "";
+    $.getJSON("https://api.ipify.org?format=json",
+    function(data) {
+        ip = data.ip;
+    });
+
+    const objct = {        
+        vIp: ip,
+        dFecha: fecha
+    }
+
+    fetch("https://service.poclab.pe/agendarcita/api/cita/PostGuardarVisita", {
+        method: "POST",
+        body: JSON.stringify(objct),
+        headers:{
+            'Content-Type': 'application/json'
+        }
+    })
+    .then((res) => res.json())
+    .then((response) => {
+    })
+    .catch((error) =>  console.log(error));
+}
 
 
 
