@@ -241,13 +241,17 @@ function PostGuardarVisita(){
     var sisOperativo = "";
     var navegador = "";
 
+    /*var p = detector.phone();
+    var t = detector.tablet()
+    var m = detector.mobile();*/
+
     if(detector.phone()!=null || detector.tablet()!=null){
         marca = detector.mobile();
 
         if(detector.phone()!=null)
             dispositivo = "Celular";
         
-        if(detector.phone()!=null)
+        if(detector.tablet()!=null)
             dispositivo = "Tableta"
     }
 
