@@ -230,7 +230,7 @@ function GetFirstHashtag(){
 }
 
 function PostGuardarVisita(){
-
+    debugger;
     var ip = "";
     var url = window.location.toString();
     var detector = new MobileDetect(window.navigator.userAgent)
@@ -243,13 +243,17 @@ function PostGuardarVisita(){
 
     if(detector.mobile()!=null){
         marca = detector.mobile();
-    }else if(detector.phone()!=null){
+    }
+    if(detector.phone()!=null){
         dipositivo = detector.phone();
-    }else if(detector.tablet()!=null){
+    }
+    if(detector.tablet()!=null){
         dipositivo = detector.tablet();
-    }else if(detector.os()!=null){
+    }
+    if(detector.os()!=null){
         sisOperativo = detector.os();
-    }else if(detector.userAgent()!=null){
+    }
+    if(detector.userAgent()!=null){
         navegador = detector.userAgent();
     }
 
