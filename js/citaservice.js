@@ -1,4 +1,5 @@
 var $aniodesde = 0;
+var detector = new MobileDetect(window.navigator.userAgent);
 
 $(document).ready(function(){
 
@@ -230,29 +231,52 @@ function GetFirstHashtag(){
 }
 
 function SaveInformationSession(){
-    var fecha = new Date();
     var ip = "";
+    var url = window.location.toString();
+
+    //Origen
+    var tipoDispositivo = "Escritorio";
+
+    var marca = "";
+    var celular = detector.phone();
+    var tablet = detecter.tablet();
+
+    if(celular !== null || tablet !== null){
+        marca = detector.mobile();
+        if(celular !== null)
+            tipoDispositivo = "Celular";
+        if(tablet !== null)
+            tipoDispositivo = "Tableta";
+    }
+
+    var sisOperativo = detector.os();
+    var navegador = detector.userAgent();
+
     $.getJSON("https://api.ipify.org?format=json",
     function(data) {
         ip = data.ip;
-    });
-
-    const objct = {        
-        vIp: ip,
-        dFecha: fecha
-    }
-
-    fetch("https://service.poclab.pe/agendarcita/api/cita/PostGuardarVisita", {
-        method: "POST",
-        body: JSON.stringify(objct),
-        headers:{
-            'Content-Type': 'application/json'
+        const objct = {        
+            vUrl: url,
+            vIp: ip,
+            vTipo: tipoDispositivo,
+            vMarca: marca,
+            vSO: sisOperativo,
+            vNavegador: navegador,
+            Key:"!SDFT$$$$&F(/GF7&F7f))?=0'===IY(&&%$%$!H(U/GFD%VBN(MI YT% %RCGRCVBBUJNU(NN"
         }
-    })
-    .then((res) => res.json())
-    .then((response) => {
-    })
-    .catch((error) =>  console.log(error));
+    
+        fetch("https://service.poclab.pe/agendarcita/api/cita/PostGuardarVisita", {
+            method: "POST",
+            body: JSON.stringify(objct),
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        })
+        .then((res) => res.json())
+        .then((response) => {
+        })
+        .catch((error) =>  console.log(error));
+    });
 }
 
 
