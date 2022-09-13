@@ -263,7 +263,7 @@ function PostGuardarVisita(){
         const objct = {        
             vUrl: url,
             vIp: ip,
-            vTipo: tipoDispositivo,
+            vTipo: dipositivo,
             vMarca: marca,
             vSO: sisOperativo,
             vNavegador: navegador,
