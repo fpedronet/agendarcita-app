@@ -230,26 +230,27 @@ function GetFirstHashtag(){
 }
 
 function PostGuardarVisita(){
-    debugger;
+    
     var ip = "";
     var url = window.location.toString();
     var detector = new MobileDetect(window.navigator.userAgent)
 
     //Origen
     var marca = "";
-    var dipositivo = "Escritorio";
+    var dispositivo = "Escritorio";
     var sisOperativo = "";
     var navegador = "";
 
-    if(detector.mobile()!=null){
+    if(detector.phone()!=null || detector.tablet()!=null){
         marca = detector.mobile();
+
+        if(detector.phone()!=null)
+            dispositivo = "Celular";
+        
+        if(detector.phone()!=null)
+            dispositivo = "Tableta"
     }
-    if(detector.phone()!=null){
-        dipositivo = detector.phone();
-    }
-    if(detector.tablet()!=null){
-        dipositivo = detector.tablet();
-    }
+
     if(detector.os()!=null){
         sisOperativo = detector.os();
     }
@@ -257,32 +258,37 @@ function PostGuardarVisita(){
         navegador = detector.userAgent();
     }
 
+    const objct = {        
+        vUrl: url,
+        vTipo: dispositivo,
+        vMarca: marca,
+        vSO: sisOperativo,
+        vNavegador: navegador,
+        Key:"!SDFT$$$$&F(/GF7&F7f))?=0'===IY(&&%$%$!H(U/GFD%VBN(MI YT% %RCGRCVBBUJNU(NN"
+    }
+
     $.getJSON("https://api.ipify.org?format=json",
     function(data) {
         ip = data.ip;
-        const objct = {        
-            vUrl: url,
-            vIp: ip,
-            vTipo: dipositivo,
-            vMarca: marca,
-            vSO: sisOperativo,
-            vNavegador: navegador,
-            Key:"!SDFT$$$$&F(/GF7&F7f))?=0'===IY(&&%$%$!H(U/GFD%VBN(MI YT% %RCGRCVBBUJNU(NN"
-        }
-    
-        fetch("https://service.poclab.pe/agendarcita/api/cita/PostGuardarVisita", {
-            method: "POST",
-            body: JSON.stringify(objct),
-            headers:{
-                'Content-Type': 'application/json'
-            }
-        })
-        .then((res) => res.json())
-        .then((response) => {
-        })
-        .catch((error) =>  console.log(error));
+        objct.vIp = ip;
     });
+
+    //Le da tiempo para que se obtenga el IP
+    setTimeout(() => { GuardarVisita(objct); }, 500);
 }
 
+function GuardarVisita(objct){
+    fetch("https://service.poclab.pe/agendarcita/api/cita/PostGuardarVisita", {
+        method: "POST",
+        body: JSON.stringify(objct),
+        headers:{
+            'Content-Type': 'application/json'
+        }
+    })
+    .then((res) => res.json())
+    .then((response) => {
+    })
+    .catch((error) =>  console.log(error));
+}
 
 
