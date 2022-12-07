@@ -2,6 +2,8 @@ var $aniodesde = 0;
 
 $(document).ready(function(){
 
+    console.log(location.href)
+
     $('#take-over').modal({backdrop: 'static', keyboard: false});
 
     $('#datetimepicker12').datepicker({
@@ -30,7 +32,7 @@ $(document).ready(function(){
     $("#cblugar").html("");
 
     const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio","Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",];
-    const lugar = ["Independencia", "San Miguel", "Lince", "Miraflores","San Borja", "La Molina","Surco","Villa El Salvador"];
+    const lugar = ["Los Olivos", "San Miguel", "Lince", "San Borja", "La Molina", "San Juan de Lurigancho", "Miraflores", "Surco", "Villa El Salvador"];
 
     for (let index = 1; index <= 31; index++) {
         itemDia += "<option value="+index+">"+index+"</option>";

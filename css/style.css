@@ -1057,6 +1057,13 @@ button:focus,
     height: 8.5%;
 }
 
+.button-takeover{
+    position: fixed;
+    z-index: 1;
+    right: 33%;
+    bottom: 10%;
+}
+
 .datepicker-days{
     background-color: #fff;
 }
